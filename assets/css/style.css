@@ -1,0 +1,127 @@
+@import url('root.css');
+
+.left-panel {
+    width: var(--t-left-panel-default-width);
+    height: 100vh;
+    background-color: var(--t-left-panel-bg-color);
+}
+
+body > .container  {
+    width: calc(100% - var(--t-left-panel-default-width));
+    height: 100vh;
+}
+
+.container header {
+    width: 100%;
+    background: var(--t-header-bg-color);
+    height: var(--t-header-height);
+    color: var(--t-header-color);
+    display: flex;
+}
+
+.user {
+    max-width: 350px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin-left: 40px;
+}
+
+.user > .user-info {
+    display: flex;
+    align-items: center;
+} 
+
+.user-image {
+    width: 45px;
+    height: 45px;
+    outline: 1px solid #fff;
+    outline-offset: 2px;
+    border-radius: 50%;
+    margin-right: 15px;
+    overflow: hidden;
+}
+
+.search-panel {
+    display: flex;
+    align-items: center;
+    margin-left: 50px;
+}
+
+.search-panel .search-panel-input{
+    width: 350px;
+}
+
+.search-panel input{
+    width: 100%;
+    background: #444549;
+    border: 2px solid #6B6D73;
+    box-sizing: border-box;
+    border-radius: 5px;
+    padding: 10px 50px;
+    color: #fff;
+}
+
+.toggler {
+    position: absolute;
+    right: 20px;
+    top: calc(50% - 20px/2);
+    cursor: pointer;
+}
+
+
+.toggle-panel {
+    position: relative;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid #fff;
+}
+
+.toggle-panel .logo a {
+    text-decoration: none;
+    font-size: 35px;
+    color: #fff;
+    padding-left: 20px;
+}
+
+.left-panel  .link-list .list {
+    margin-top: 40px;
+}
+
+
+.left-panel  .link-list .list .item{
+    display: flex;
+    align-items: center;
+    padding: 4px 20px;
+    cursor: pointer;
+}
+
+.left-panel  .link-list .list .item a {
+    text-decoration: none;
+    color: #fff;
+    opacity: .7;
+    font-size: 24px
+}
+
+.left-panel  .link-list .list .item.active a {
+    opacity: 1;
+}
+
+.mini-cards {
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.mini-cards .cardy{
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 250px;
+    height: 70px;
+    border-radius: 10px;
+    background: #62BFC4;
+}
