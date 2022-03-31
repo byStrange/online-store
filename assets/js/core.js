@@ -176,7 +176,7 @@ class CreateApp {
             ls: [],
           },
           xlg: {
-            media: "screen and (max-width: 1400px)",
+            media: "screen and (max-width: 2000px)",
             ls: [],
           },
         };

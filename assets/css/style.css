@@ -1,13 +1,57 @@
 @import url('root.css');
 
 .left-panel {
-    width: var(--t-left-panel-default-width);
+    /* width: var(--t-left-panel-default-width); */
     height: 100vh;
+    transition: 500ms;
     background-color: var(--t-left-panel-bg-color);
 }
 
+.left-panel.collapsed {
+    width: 5%;
+}
+[main].container.active {
+    width: 95%;
+}
+.left-panel.collapsed > .link-list {
+    transition: all 0.5s;
+    transform: translateX(-70px);
+    opacity: 0;
+}
+
+.left-panel:not(.collapsed) a{
+    display: inline !important;
+}
+
+.left-panel.collapsed .toggle-panel{
+    justify-content: center;
+}
+
+.left-panel.collapsed .toggle-panel .toggler{
+    right: auto;
+    padding-right: 5px;
+}
+
+.left-panel.collapsed .toggle-panel .toggler span:nth-child(odd){
+    width: 50%;
+    margin-left: 65.5%;
+    transform: rotate(45deg) translateY(5px);
+}
+
+.left-panel.collapsed .toggle-panel .toggler span:last-child{
+    transform: rotate(-45deg) translateY(-5px);
+}
+
+.left-panel.collapsed .logo {
+    transition: .5s;
+    transform: translateX(-70px);
+    opacity: 0;
+    transition-delay: opacity 500ms;
+}
+
 body > .container  {
-    width: calc(100% - var(--t-left-panel-default-width));
+    width: 86%;
+    /* width: calc(100% - var(--t-left-panel-default-width)); */
     height: 100vh;
 }
 
@@ -124,4 +168,65 @@ body > .container  {
     height: 70px;
     border-radius: 10px;
     background: #62BFC4;
+    color: #fff;
+    padding-left: 65px;
+    margin-bottom: 35px;
+    margin-top: 50px;
+}
+
+.cardy .count {
+    font-weight: 500;
+}
+
+.cardy .title {
+    font-weight : 400;
+    opacity: .9;
+}
+
+.container {
+    width: 95%;
+}
+table button {
+    /* padding: 5px 0px; */
+    width: 130px;
+    background: #62BFC4;
+    border: none;
+    padding: 7px 0;
+    border-radius: 10px;
+    cursor: pointer;
+    color: #fff;
+    font-size: 18px;
+    margin: 15px 0;
+}
+
+table button[action='successed'] {
+    background: #009430;
+}
+
+table button[action='pending'] {
+    background: #017B8B;
+}
+
+table tr td:nth-child(6) {
+    text-align: center;
+}
+
+table tr:not(:last-child) {
+    margin-bottom: 10px !important;
+}
+
+ table{
+    border-collapse: collapse;
+    overflow: auto;
+    width: 100%;
+ } 
+tr {
+    border: none;
+}
+ tr:not(:first-child) {
+    border-bottom: 1px solid black;
+}
+
+tr:hover {
+    background: rgba(0,0,0,0.1)
 }

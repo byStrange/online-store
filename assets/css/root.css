@@ -2,7 +2,7 @@
     --t-header-bg-color: #303030;
     --t-header-color: #fff;
     --t-header-height: 100px;
-    --t-left-panel-default-width: 250px;
+    --t-left-panel-default-width: 20%;
     --t-left-panel-bg-color: #323641;
     --t-font-family: "Poppins", 'Roboto', sans-serif;
 }
@@ -43,6 +43,7 @@ body {
     height: 3px;
     border-radius: 5px;
     background: #fff;
+    transition: 500ms;
 }
 .toggler-icon > span:not(:last-child) {
     margin-bottom: 5px;
