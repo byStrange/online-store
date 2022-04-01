@@ -66,7 +66,7 @@
                     <span>Bu hafta</span>
                     <span .fas.fa-caret-down></span>
                 </button>
-                <button .padding background="#FF6A00">
+                <button .padding background="#FF6A00" id="openModal">
                     <span>Mahsulot qo'shish</span>
                 </button>
             </div>
@@ -148,6 +148,70 @@
             </div>
         </div>
 
+    </div>
+    <div .modal.hide position="absolute" background="#Fff" top="50%" left="50%" transform="translate(-50%, -50%)" width="700px" padding="30px" borderRadius="10px" overflow="auto" height="90%">
+        <span fontSize="20px" >Mahsulot qo'shish</span>
+        <form action="#!" width="100%" marginTop="30px" position="relative">
+            <div .row>
+                <label for="name">
+                    Mahsulot nomi
+                </label>
+                <input type="text" placeholder="Nomini yozish......">
+            </div>
+            <div .row>
+                <label for="con">Brend nomi</label>
+                <select id="con">
+                    <option selected disabled>tanlash yoki yozish...</option>
+                    <option>bolim</option>
+                    <option>bolim</option>
+                    <option>bolim</option>
+                </select>
+            </div>
+            <div .row>
+                <label for="action">Kategoriya nomi</label>
+                <select id="action">
+                    <option selected disabled>tanlash yoki yozish...</option>
+                    <option>holat</option>
+                    <option>holat</option>
+                    <option>holat</option>
+                    <option>holat</option>
+                </select>
+            </div>
+            <div .row>
+                <label for="about">Mahsulot haqida</label>
+                <textarea  id="desc" cols="30" rows="10" placeholder="Ma’lumot"></textarea>
+            </div>
+            <div .row>
+                <label for="quantti">Mahsulot miqdori</label>
+                <input type="text" placeholder="Miqdori..." id="quantti">
+            </div>
+            <div .row>
+                <label for="price">Narxi</label>
+                <input type="text" placeholder="Narx..." id="price">
+            </div>
+            <div .row>
+                <label for="key">Mahsulot kalit so’zi (eg: haier, huawei, samsung)</label>
+                <input type="text" id="key" placeholder="Kalit so’z...">
+            </div>
+            <div .row>
+                <label for="discount">Chegirma</label>
+                <input type="text" id="discount" placeholder="Chegirma...">
+            </div>
+            <div .row>
+                <label for="image">Mahsulot asosiy rasmi (format: jpg, jpeg, png) </label>
+                <input type="file" value="Fayl tanlash">
+            </div>
+            <div .row>
+                <label for="image">Mahsulot asosiy rasmi (format: jpg, jpeg, png) </label>
+                <input type="file" value="Fayl tanlash">
+            </div>
+            <div .row display="block">
+                <button type="submit" .padding background="#FF6A00">
+                    <span>Qo'shish</span>
+                </button>
+            </div>
+                <div class="fas fa-times" id="closeModal" position="absolute" top="-60px" right="0" cursor="pointer"></div>
+        </form>
     </div>
     <script src="assets/js/core.js"></script>
     <script src="assets/js/main.js"></script>
