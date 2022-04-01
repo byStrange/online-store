@@ -24,13 +24,14 @@
         </div>
         <div .link-list>
             <ul .list>
-                <li .item.active icon="panel"><a href="#">Bosh panel</a></li>
+                <li .item.active icon="panel"><a href="index.html">Bosh panel</a></li>
                 <li .item icon="shop"><a href="#">Do'kon</a></li>
-                <li .item icon="category"><a href="#">Kategoriyalar</a></li>
-                <li .item icon="messagebox"><a href="#">Habarlar</a></li>
-                <li .item icon="clients"><a href="#">Mijozlar</a></li>
+                <li .item icon="products"><a href="products.html">Mahsulotlar</a></li>
+                <li .item icon="category"><a href="categories.html">Kategoriyalar</a></li>
+                <li .item icon="messagebox"><a href="emails.html">Habarlar</a></li>
+                <li .item icon="clients"><a href="customers.html">Mijozlar</a></li>
                 <li .item icon="location"><a href="#">Joylashuvlar</a></li>
-                <li .item icon="settings"><a href="#">Sozlamalar</a></li>
+                <li .item icon="settings"><a href="settings.html">Sozlamalar</a></li>
             </ul>
         </div>
     </div>
@@ -57,7 +58,10 @@
 
         <div .container marginLeft="50px">
             <div .mini-cards>
-                <div .cardy>
+                <div .cardy >
+                    <div .card-icon>
+                        <i class="fas fa-user"></i>
+                    </div>
                     <div .title>
                         <p>User</p>
                     </div>
@@ -65,7 +69,10 @@
                         <span>56</span>
                     </h1>
                 </div>
-                <div .cardy>
+                <div .cardy >
+                    <div .card-icon>
+                        <i class="fas fa-user-plus"></i>
+                    </div>
                     <div .title>
                         <p>Yangi userlar</p>
                     </div>
@@ -74,6 +81,10 @@
                     </h1>
                 </div>
                 <div .cardy>
+                    <div .card-icon>
+                        <i class="fas fa-arrow-up"></i>
+                    </div>
+
                     <div .title>
                         <p>Tashriflar</p>
                     </div>
@@ -81,7 +92,10 @@
                         <span>429</span>
                     </h1>
                 </div>
-                <div .cardy>
+                <div .cardy >
+                    <div .card-icon>
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
                     <div .title>
                         <p>Buyurtmalar</p>
                     </div>
@@ -89,7 +103,10 @@
                         <span>10</span>
                     </h1>
                 </div>
-                <div .cardy>
+                <div .cardy >
+                    <div .card-icon>
+                        <i class="fas fa-wallet"></i>
+                    </div>
                     <div .title>
                         <p>Tushum</p>
                     </div>
@@ -98,16 +115,18 @@
                     </h1>
                 </div>
             </div>
-            <div .info-box marginTop="30px" overflow="auto">
+                <i class="fa-solid fa-cart-shopping"></i>
+
+            <div .info-box marginTop="30px">
                 <div .row display="flex" width="100%" justifyContent="space-between">
-                    <span fontSize="30px" fontWeight="normal">So'ngi buyurtmalar</span>
+                    <span fontSize="25px" fontWeight="normal">So'ngi buyurtmalar</span>
                     <span>
                         <a href="#" color="#FF6A00" fontSize="22px">Barchasini ko'rish</a>
                     </span>
                 </div>
 
-                <div overflowX="auto" width="1500px">
-                    <table textAlign="left" border="1"> 
+                <div overflow="auto" width="100%">
+                    <table textAlign="left" border="1" width="1500px"> 
                         <tr>
                             <th width="230px" xlg:width:300px!>Buyurtma ID si</th>
                             <th width="200px" xlg:width:250px!>To‘lov turi</th>

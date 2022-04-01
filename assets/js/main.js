@@ -29,3 +29,16 @@
         }, 500)
     })
 })()
+
+;(function () {
+    const modal = {
+        self: document.querySelector('.modal'),
+        closer: document.querySelector('#openModal'),
+        opener: document.querySelector('#closeModal')
+    }
+    modal.opener.addEventListener('click', function () {
+        modal.self.classList.add('hide');
+    })
+    modal.closer.addEventListener('click', function () {
+        modal.self.classList.remove('hide');})
+})()

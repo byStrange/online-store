@@ -1,4 +1,11 @@
+/* import icon.css */
+/* import font-awesome.css */
 @import url('root.css');
+@import url('../fonts/css/all.css');
+@import url('icons.css');
+body {
+    overflow: hidden;
+}
 
 .left-panel {
     /* width: var(--t-left-panel-default-width); */
@@ -90,8 +97,32 @@ body > .container  {
     display: flex;
     align-items: center;
     margin-left: 50px;
+    position: relative;
 }
 
+.search-panel::before{
+    content: '';
+    position: absolute;
+    left: 10px;
+    top: calc(50% + 10px);
+    transform: translateY(-50%);
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    border: 1px solid #6B6D73;
+}
+
+.search-panel::after {
+    content: '';
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    border: 1.5px solid #6B6D73;
+}
 .search-panel .search-panel-input{
     width: 350px;
 }
@@ -102,9 +133,12 @@ body > .container  {
     border: 2px solid #6B6D73;
     box-sizing: border-box;
     border-radius: 5px;
-    padding: 10px 50px;
+    padding: 10px 40px;
     color: #fff;
+    font-size: 17px;
 }
+
+
 
 .toggler {
     position: absolute;
@@ -172,6 +206,16 @@ body > .container  {
     padding-left: 65px;
     margin-bottom: 35px;
     margin-top: 50px;
+    position: relative;
+}
+
+.mini-cards .cardy .card-icon{
+    position: absolute;
+    left: 20px;
+    font-size: 30px;
+    top : 50%;
+    transform: translateY(-50%);
+    font-family: "Font Awesome 6 Free";
 }
 
 .cardy .count {
@@ -186,10 +230,14 @@ body > .container  {
 .container {
     width: 95%;
 }
-table button {
+
+.line-control [name] {
+    font-size: 40px;
+    font-weight: 500;
+}
+
+table button, button {
     /* padding: 5px 0px; */
-    width: 130px;
-    background: #62BFC4;
     border: none;
     padding: 7px 0;
     border-radius: 10px;
@@ -198,7 +246,13 @@ table button {
     font-size: 18px;
     margin: 15px 0;
 }
-
+.padding {
+    padding: 10px 20px;
+}
+table button {
+    width: 130px;
+    background: #62BFC4;
+}
 table button[action='successed'] {
     background: #009430;
 }
@@ -207,7 +261,7 @@ table button[action='pending'] {
     background: #017B8B;
 }
 
-table tr td:nth-child(6) {
+table:not(.no-center) tr td:nth-child(6) {
     text-align: center;
 }
 
@@ -229,4 +283,68 @@ tr {
 
 tr:hover {
     background: rgba(0,0,0,0.1)
+}
+
+table[theme='blue']  button{
+    background: #4144E7;
+}
+
+table[theme='greeny'] button:not([action=not-active]) {
+    background: #009430;
+}
+
+table[theme='greeny'] button[action=not-active] {
+    background: #FF6A00  !important;
+}
+
+table th {
+    font-size: 18px;
+}
+
+.message {
+    margin-bottom: 40px;
+}
+
+.container::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+/* create a  simple scrollbar */
+.container::-webkit-scrollbar-track {
+    background: #fff;
+}
+
+.edit-panel {
+    width: 600px;
+}
+
+form .row {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+form .row:not(:last-child) {
+    margin-bottom: 18px;
+}
+
+
+form .row label{ 
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+form input, form select {
+    padding: 12px 15px;
+    border: 2px solid #6B6D73;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+.modal {
+    display: block;
+}
+
+.modal.hide {
+    display: none;
 }
