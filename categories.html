@@ -55,7 +55,7 @@
                 </div>
             </div>
         </header>
-        <div .line-control width="100%" display="flex" justifyContent="space-between" padding="0 35px" alignItems="center" marginTop="30px">
+        <div .line-control width="100%" display="flex" justifyContent="space-between" padding="0 35px" alignItems="center" marginTop="30px" md:flex-direction:column>
             <div name>
                 Kategoriya
             </div>
@@ -118,7 +118,14 @@
                                     <span>Aktiv</span>
                                 </button>
                             </td>
-                            <td></td>
+                            <td>
+                                <span action="edit">
+                                    <i .fas.fa-pen></i>
+                                </span>
+                                <span action="show">
+                                    <i .fas.fa-eye></i>
+                                </span>
+                            </td>
                         </tr>
                     </table>
                 </div>
@@ -126,7 +133,7 @@
         </div>
 
     </div>
-    <div .modal.hide position="absolute" background="#Fff" top="50%" left="50%" transform="translate(-50%, -50%)" width="700px" padding="30px" borderRadius="10px">
+    <div .modal.hide  sm:width:100%! md:width:100%!>
         <span fontSize="20px" >Kategoriya qo'shish</span>
         <form action="#!" width="100%" marginTop="30px" position="relative">
             <div .row>

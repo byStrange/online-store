@@ -329,6 +329,21 @@ form .row:not(:last-child) {
     margin-bottom: 18px;
 }
 
+::-webkit-scrollbar-thumb {
+    background: rgba(128, 128, 128, 0.548);
+    border-radius: 20px;
+}
+
+
+::-webkit-scrollbar-track{
+    border-radius: 20px;
+
+}
+::-webkit-scrollbar {
+    border-radius: 20px;
+    overflow: hidden;
+    width: 5px;
+}
 
 form .row label{ 
     font-size: 18px;
@@ -380,6 +395,7 @@ form input, form select {
     .left-panel.collapsed {
         width: 30px;
         height: var(--t-header-height) !important;
+        position: absolute !important;
     }
     .left-panel.collapsed .toggle-panel {
         border-bottom: none  !important;
@@ -389,5 +405,11 @@ form input, form select {
     }
     .modal {
         top: 45%;
+    }
+    [main].container > div{
+        margin-left: 10px !important; 
+    }
+    .edit-panel {
+        width: 100% !important; 
     }
 }

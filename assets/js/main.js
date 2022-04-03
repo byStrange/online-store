@@ -20,8 +20,9 @@
 })()
 
 ;(function () {
+    var leftPanel = document.querySelector('.left-panel');
+    leftPanel.classList.add('collapsed')
     document.querySelector('.toggler-icon').addEventListener('click', function () {
-        var leftPanel = document.querySelector('.left-panel');
         leftPanel.classList.toggle('collapsed');
         document.querySelector('[main].container').classList.toggle('active');
         setTimeout(()=>{
@@ -41,4 +42,4 @@
     })
     modal.closer.addEventListener('click', function () {
         modal.self.classList.remove('hide');})
-})()
+})();
