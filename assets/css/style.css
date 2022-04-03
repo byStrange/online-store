@@ -5,6 +5,7 @@
 @import url('icons.css');
 body {
     overflow: hidden;
+    max-width: 1900px;
 }
 
 .left-panel {
