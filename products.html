@@ -55,12 +55,12 @@
                 </div>
             </div>
         </header>
-        <div .line-control width="100%" display="flex" justifyContent="space-between" padding="0 35px" alignItems="center" marginTop="30px">
+        <div .line-control width="100%" display="flex" sm:flex-direction:column  justifyContent="space-between" padding="0 35px" alignItems="center" marginTop="30px">
             <div name>
                 Mahsulotlar 
             </div>
 
-            <div control>
+            <div .control  >
                 <button .padding color="#4A4A4A" border="2px solid #4A4A4A">
                     <span .fas.fa-calendar></span>
                     <span>Bu hafta</span>
@@ -149,9 +149,9 @@
         </div>
 
     </div>
-    <div .modal.hide position="absolute" background="#Fff" top="50%" left="50%" transform="translate(-50%, -50%)" width="700px" padding="30px" borderRadius="10px" overflow="auto" height="90%">
+    <div .modal.hide  sm:width:100%! md:width:100%!>
         <span fontSize="20px" >Mahsulot qo'shish</span>
-        <form action="#!" width="100%" marginTop="30px" position="relative">
+        <form action="#!" width="100%" marginTop="30px" position="relative" height="100%" overflow="auto">
             <div .row>
                 <label for="name">
                     Mahsulot nomi
@@ -210,7 +210,7 @@
                     <span>Mahsulotni qo'shish</span>
                 </button>
             </div>
-                <div class="fas fa-times" id="closeModal" position="absolute" top="-60px" right="0" cursor="pointer"></div>
+                <div class="fas fa-times" id="closeModal" position="fixed" top="-60px" right="0" cursor="pointer"></div>
         </form>
     </div>
     <script src="assets/js/core.js"></script>

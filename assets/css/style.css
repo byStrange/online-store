@@ -343,8 +343,51 @@ form input, form select {
 }
 .modal {
     display: block;
+    position: absolute;
+    background: #Fff;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    width: 700px;
+    padding: 30px;
+    border-radius: 10px;
+    height: 90%;
+    z-index: 5;
 }
+
 
 .modal.hide {
     display: none;
+}
+
+@media screen and (max-width: 776px) {
+    body {
+        overflow: auto;
+        overflow-x: hidden;
+    }
+    body > .container {
+        width: 100%  !important;
+    }
+    .left-panel {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1;
+    }
+    .search-panel {
+        display: none;
+    }
+    .left-panel.collapsed {
+        width: 30px;
+        height: var(--t-header-height) !important;
+    }
+    .left-panel.collapsed .toggle-panel {
+        border-bottom: none  !important;
+    }
+    .cardy:not(:first-child) {
+        margin-top: 30px !important;
+    }
+    .modal {
+        top: 45%;
+    }
 }
