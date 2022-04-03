@@ -56,6 +56,11 @@ body {
     transition-delay: opacity 500ms;
 }
 
+.left-panel.collapsed .logo a{
+    display: none;
+}
+
+
 body > .container  {
     width: 86%;
     /* width: calc(100% - var(--t-left-panel-default-width)); */
@@ -317,6 +322,23 @@ table th {
 
 .edit-panel {
     width: 600px;
+}
+
+span[action] {
+    cursor: pointer;
+}
+
+.line-control {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    padding: 0px 35px;
+    width: 100%;
+}
+
+span[action]:not(:last-child) {
+    margin-right: 10px;
 }
 
 form .row {
