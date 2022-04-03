@@ -67,6 +67,10 @@ body > .container  {
     height: 100vh;
 }
 
+body > .container.open  { 
+    width: calc(100% - 5%) !important;
+}
+
 .container header {
     width: 100%;
     background: var(--t-header-bg-color);
@@ -402,7 +406,7 @@ form input, form select {
         overflow: auto;
         overflow-x: hidden;
     }
-    body > .container {
+    body > .container.open, body > .container.active {
         width: 100%  !important;
     }
     .left-panel {
