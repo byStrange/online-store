@@ -3,6 +3,7 @@
 @import url('root.css');
 @import url('../fonts/css/all.css');
 @import url('icons.css');
+
 body {
     overflow: hidden;
     max-width: 1900px;
@@ -18,35 +19,37 @@ body {
 .left-panel.collapsed {
     width: 5%;
 }
+
 [main].container.active {
     width: 95%;
 }
-.left-panel.collapsed > .link-list {
+
+.left-panel.collapsed>.link-list {
     transition: all 0.5s;
     transform: translateX(-70px);
     opacity: 0;
 }
 
-.left-panel:not(.collapsed) a{
+.left-panel:not(.collapsed) a {
     display: inline !important;
 }
 
-.left-panel.collapsed .toggle-panel{
+.left-panel.collapsed .toggle-panel {
     justify-content: center;
 }
 
-.left-panel.collapsed .toggle-panel .toggler{
+.left-panel.collapsed .toggle-panel .toggler {
     right: auto;
     padding-right: 5px;
 }
 
-.left-panel.collapsed .toggle-panel .toggler span:nth-child(odd){
+.left-panel.collapsed .toggle-panel .toggler span:nth-child(odd) {
     width: 50%;
     margin-left: 65.5%;
     transform: rotate(45deg) translateY(5px);
 }
 
-.left-panel.collapsed .toggle-panel .toggler span:last-child{
+.left-panel.collapsed .toggle-panel .toggler span:last-child {
     transform: rotate(-45deg) translateY(-5px);
 }
 
@@ -57,18 +60,18 @@ body {
     transition-delay: opacity 500ms;
 }
 
-.left-panel.collapsed .logo a{
+.left-panel.collapsed .logo a {
     display: none;
 }
 
 
-body > .container  {
+body>.container {
     width: 86%;
     /* width: calc(100% - var(--t-left-panel-default-width)); */
     height: 100vh;
 }
 
-body > .container.open  { 
+body>.container.open {
     width: calc(100% - 5%) !important;
 }
 
@@ -88,10 +91,10 @@ body > .container.open  {
     margin-left: 40px;
 }
 
-.user > .user-info {
+.user>.user-info {
     display: flex;
     align-items: center;
-} 
+}
 
 .user-image {
     width: 45px;
@@ -110,7 +113,7 @@ body > .container.open  {
     position: relative;
 }
 
-.search-panel::before{
+.search-panel::before {
     content: '';
     position: absolute;
     left: 10px;
@@ -133,11 +136,12 @@ body > .container.open  {
     border-radius: 50%;
     border: 1.5px solid #6B6D73;
 }
-.search-panel .search-panel-input{
+
+.search-panel .search-panel-input {
     width: 350px;
 }
 
-.search-panel input{
+.search-panel input {
     width: 100%;
     background: #444549;
     border: 2px solid #6B6D73;
@@ -173,26 +177,26 @@ body > .container.open  {
     padding-left: 20px;
 }
 
-.left-panel  .link-list .list {
+.left-panel .link-list .list {
     margin-top: 40px;
 }
 
 
-.left-panel  .link-list .list .item{
+.left-panel .link-list .list .item {
     display: flex;
     align-items: center;
     padding: 4px 20px;
     cursor: pointer;
 }
 
-.left-panel  .link-list .list .item a {
+.left-panel .link-list .list .item a {
     text-decoration: none;
     color: #fff;
     opacity: .7;
     font-size: 24px
 }
 
-.left-panel  .link-list .list .item.active a {
+.left-panel .link-list .list .item.active a {
     opacity: 1;
 }
 
@@ -203,7 +207,7 @@ body > .container.open  {
     width: 100%;
 }
 
-.mini-cards .cardy{
+.mini-cards .cardy {
     width: 200px;
     display: flex;
     justify-content: center;
@@ -219,11 +223,11 @@ body > .container.open  {
     position: relative;
 }
 
-.mini-cards .cardy .card-icon{
+.mini-cards .cardy .card-icon {
     position: absolute;
     left: 20px;
     font-size: 30px;
-    top : 50%;
+    top: 50%;
     transform: translateY(-50%);
     font-family: "Font Awesome 6 Free";
 }
@@ -233,7 +237,7 @@ body > .container.open  {
 }
 
 .cardy .title {
-    font-weight : 400;
+    font-weight: 400;
     opacity: .9;
 }
 
@@ -256,13 +260,16 @@ table button, button {
     font-size: 18px;
     margin: 15px 0;
 }
+
 .padding {
     padding: 10px 20px;
 }
+
 table button {
     width: 130px;
     background: #62BFC4;
 }
+
 table button[action='successed'] {
     background: #009430;
 }
@@ -279,23 +286,25 @@ table tr:not(:last-child) {
     margin-bottom: 10px !important;
 }
 
- table{
+table {
     border-collapse: collapse;
     overflow: auto;
     width: 100%;
- } 
+}
+
 tr {
     border: none;
 }
- tr:not(:first-child) {
+
+tr:not(:first-child) {
     border-bottom: 1px solid black;
 }
 
 tr:hover {
-    background: rgba(0,0,0,0.1)
+    background: rgba(0, 0, 0, 0.1)
 }
 
-table[theme='blue']  button{
+table[theme='blue'] button {
     background: #4144E7;
 }
 
@@ -304,7 +313,7 @@ table[theme='greeny'] button:not([action=not-active]) {
 }
 
 table[theme='greeny'] button[action=not-active] {
-    background: #FF6A00  !important;
+    background: #FF6A00 !important;
 }
 
 table th {
@@ -362,17 +371,18 @@ form .row:not(:last-child) {
 }
 
 
-::-webkit-scrollbar-track{
+::-webkit-scrollbar-track {
     border-radius: 20px;
 
 }
+
 ::-webkit-scrollbar {
     border-radius: 20px;
     overflow: hidden;
     width: 5px;
 }
 
-form .row label{ 
+form .row label {
     font-size: 18px;
     margin-bottom: 10px;
 }
@@ -383,13 +393,14 @@ form input, form select {
     box-sizing: border-box;
     border-radius: 10px;
 }
+
 .modal {
     display: block;
     position: absolute;
     background: #Fff;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%); 
+    transform: translate(-50%, -50%);
     width: 700px;
     padding: 30px;
     border-radius: 10px;
@@ -407,36 +418,56 @@ form input, form select {
         overflow: auto;
         overflow-x: hidden;
     }
-    body > .container.open, body > .container.active {
-        width: 100%  !important;
+
+    body>.container.open, body>.container.active {
+        width: 100% !important;
     }
+
     .left-panel {
         position: fixed;
         top: 0;
         left: 0;
         z-index: 1;
     }
+
     .search-panel {
         display: none;
     }
+
     .left-panel.collapsed {
         width: 30px;
         height: var(--t-header-height) !important;
         position: absolute !important;
     }
+
     .left-panel.collapsed .toggle-panel {
-        border-bottom: none  !important;
+        border-bottom: none !important;
     }
+
     .cardy:not(:first-child) {
         margin-top: 30px !important;
     }
+
     .modal {
         top: 45%;
     }
-    [main].container > div{
-        margin-left: 10px !important; 
+
+    [main].container>div {
+        margin-left: 10px !important;
     }
+
     .edit-panel {
-        width: 100% !important; 
+        width: 100% !important;
     }
 }
+
+
+/* for fixed header */
+/* 
+.container header {
+    position: fixed;
+}
+
+header ~ .line-control {
+    margin-top: 130px;
+}  */
