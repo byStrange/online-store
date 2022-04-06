@@ -415,7 +415,7 @@ form input, form select {
 
 @media screen and (max-width: 776px) {
     body {
-        overflow: auto;
+        /* overflow: auto; */
         overflow-x: hidden;
     }
 
