@@ -217,7 +217,7 @@ body>.container.open {
     border-radius: 10px;
     background: #62BFC4;
     color: #fff;
-    padding-left: 65px;
+    padding: 20px 0 15px 65px;  
     margin-bottom: 35px;
     margin-top: 50px;
     position: relative;
